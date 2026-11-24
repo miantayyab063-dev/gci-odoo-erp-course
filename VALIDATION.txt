@@ -1,0 +1,23 @@
+Validation performed 30 October 2026
+
+PASS — Python syntax and JavaScript syntax.
+PASS — First-run admin setup, login/logout, password change.
+PASS — Password hashes; CSRF, origin checks and student write restrictions.
+PASS — Auto-save API, 30,000-word lesson persistence, concurrent-edit conflict.
+PASS — Learner notes/progress isolation, disk persistence after server restart.
+PASS — Backup/restore, local video byte-range seeking.
+PASS — Video provider URL conversion and unsupported URL handling.
+PASS — EN/AR rendering logic, RTL state, field identity and role visibility.
+
+A full real-browser visual test was not completed because Chromium was not
+available and its download failed in the execution environment. Frontend
+logic was checked with a DOM test double. Remote video playback itself was
+not tested against user-provided links (none were provided). Windows launcher
+was reviewed but not executed on Windows.
+
+Content scope: 12 bilingual practical foundation lessons, about 3,990 body
+words total across English and Arabic; NOT 30,000 words per lesson.
+
+UPDATE: Five supplied Drive filenames mapped by their lecture numbers to lesson
+video fields 1–5. URLs were returned by the Drive metadata tool. Provider
+playback, file access and topic alignment were not verified.

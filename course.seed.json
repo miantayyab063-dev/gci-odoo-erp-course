@@ -1,0 +1,604 @@
+{
+  "lessons": [
+    {
+      "id": "L01",
+      "revision": 2,
+      "title": {
+        "en": "ERP foundations",
+        "ar": "أساسيات تخطيط موارد المؤسسة"
+      },
+      "body": {
+        "en": "ERP connects people, master records and transactions across a business. Odoo provides applications that can share customers, products and business documents. A sales employee should not maintain a separate unofficial stock balance. The warehouse records physical movement; the finance team records financial recognition. Integration helps those teams work from related evidence, but it cannot repair inaccurate inputs automatically.\n\nUse a fictional company called Gulf Office Trading throughout this course. It buys office chairs, stores them and sells them to business customers. Create a process map before configuring software. For each event identify the responsible person, input document, decision, output and exception. Separate a customer request from a quotation, an order from a delivery, and an invoice from a payment. A document moving to a new state should represent a real business event.\n\nCreate a training database with fictional records. Record the Odoo version, edition and installed apps in your project notebook. Menu names and available features can differ by edition, installed modules and access rights. This course uses general Odoo workflows and links to version 19 documentation; verify your own screen before following a menu. Do not use customer personal data or connect live email, payment providers or fiscal integrations in your practice environment.",
+        "ar": "يربط نظام تخطيط موارد المؤسسة بين الأشخاص والبيانات الأساسية والمعاملات داخل المنشأة. توفر تطبيقات أودو سجلات مترابطة للعملاء والمنتجات والمستندات. لا ينبغي لموظف المبيعات الاحتفاظ برصيد مخزون غير رسمي منفصل. يسجل المستودع الحركة الفعلية، ويسجل قسم المالية الأثر المالي. يساعد الترابط على توحيد الأدلة، لكنه لا يصحح الإدخال الخاطئ تلقائياً.\n\nسنستخدم شركة افتراضية باسم شركة الخليج لتجارة المكاتب. تشتري الشركة الكراسي وتخزنها وتبيعها للعملاء. ارسم سير العمل قبل إعداد النظام. حدد لكل حدث المسؤول والمدخل والقرار والمخرج والاستثناء. ميّز بين طلب العميل وعرض السعر، وبين أمر البيع والتسليم، وبين الفاتورة والتحصيل. يجب أن يعبر تغيير حالة المستند عن حدث حقيقي.\n\nأنشئ قاعدة تدريب ببيانات افتراضية وسجل إصدار أودو ونسخته والتطبيقات المثبتة. تختلف القوائم والخصائص حسب النسخة والصلاحيات والوحدات. يعتمد هذا المحتوى على مبادئ العمل العامة ويربط بوثائق الإصدار 19؛ تحقق من شاشتك قبل تطبيق المسار. لا تستخدم بيانات شخصية حقيقية ولا تربط البريد أو المدفوعات أو الأنظمة الضريبية الفعلية أثناء التدريب."
+      },
+      "lab": {
+        "en": [
+          "Map inquiry → quotation → order → delivery → invoice → payment.",
+          "Assign an owner and an evidence document to each stage.",
+          "Describe what happens when only part of an order is available."
+        ],
+        "ar": [
+          "ارسم المسار: استفسار ← عرض سعر ← أمر بيع ← تسليم ← فاتورة ← تحصيل.",
+          "حدد المسؤول ومستند الإثبات في كل مرحلة.",
+          "اشرح التصرف عند توفر جزء من الكمية فقط."
+        ]
+      },
+      "mistake": {
+        "en": "Do not treat a draft document as proof of a completed business event.",
+        "ar": "لا تعتبر المستند المسودة دليلاً على إتمام الحدث."
+      },
+      "quiz": {
+        "question": {
+          "en": "Which event proves that goods physically left the warehouse?",
+          "ar": "ما الحدث الذي يثبت خروج البضاعة فعلياً من المستودع؟"
+        },
+        "options": {
+          "en": [
+            "A draft quotation",
+            "A validated delivery",
+            "An unpaid invoice"
+          ],
+          "ar": [
+            "عرض سعر مسودة",
+            "عملية تسليم تم اعتمادها",
+            "فاتورة غير مسددة"
+          ]
+        },
+        "answer": 1
+      },
+      "video": "https://drive.google.com/file/d/1yyfRK9J0kPbdsq3oVOcerrAjt9RO6Jyx/view?usp=drivesdk",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/applications.html"
+    },
+    {
+      "id": "L02",
+      "revision": 2,
+      "title": {
+        "en": "Navigation and working safely",
+        "ar": "التنقل والعمل الآمن"
+      },
+      "body": {
+        "en": "Begin with the app dashboard and learn how records are displayed. A list is useful for comparing many records, a form for inspecting one record, and a Kanban board for work moving between stages. Search terms, filters and grouping change what is visible; they do not normally delete records. When a record seems missing, remove filters and verify the active company before creating a duplicate.\n\nRead the document number, partner, state, date and company before taking action. Smart buttons can expose related records, but a related record may still be a draft. Open it and verify its state. Use activities to assign follow-up work with a clear owner and due date. Use the chatter to record meaningful decisions and attach supporting evidence. Never assume that an internal note was sent to the customer; verify the communication method and recipients.\n\nPractice with a role that resembles the eventual operator. Administrator access can hide permission problems. If a button is absent, check permissions and configuration rather than repeatedly changing data. Avoid bulk actions until a small sample has been checked. Before importing or modifying many records, take a backup and define how to reverse the change.",
+        "ar": "ابدأ بلوحة التطبيقات وتعرف إلى طرق عرض السجلات. تفيد القائمة في مقارنة عدة سجلات، ويفيد النموذج في مراجعة سجل واحد، وتفيد لوحة كانبان في متابعة مراحل العمل. تغير عوامل البحث والتصفية والتجميع ما يظهر على الشاشة، ولا تعني عادة حذف السجلات. إذا لم تجد سجلاً، امسح المرشحات وتحقق من الشركة النشطة قبل إنشاء نسخة مكررة.\n\nراجع رقم المستند والطرف والحالة والتاريخ والشركة قبل التنفيذ. قد تفتح الأزرار الذكية سجلات مرتبطة، لكنها قد تظل في حالة مسودة. افتح المستند وتحقق من حالته. استخدم الأنشطة لتحديد مسؤول المتابعة والموعد، وسجل القرارات المهمة وأدلتها في المحادثات. لا تفترض وصول ملاحظة داخلية إلى العميل؛ تحقق من وسيلة الإرسال والمستلمين.\n\nتدرب بصلاحيات تشبه صلاحيات الموظف الفعلي، لأن صلاحيات المدير قد تخفي المشكلات. عند غياب زر افحص الصلاحية والإعدادات بدلاً من تعديل البيانات عشوائياً. جرب العمليات الجماعية على عينة صغيرة أولاً. وقبل الاستيراد أو التعديل الواسع احتفظ بنسخة احتياطية وحدد طريقة التراجع."
+      },
+      "lab": {
+        "en": [
+          "Create a filter for one customer and remove it.",
+          "Open one transaction and list its related documents and states.",
+          "Assign a follow-up activity with an owner and deadline."
+        ],
+        "ar": [
+          "أنشئ مرشحاً لعميل واحد ثم أزله.",
+          "افتح معاملة وسجل المستندات المرتبطة وحالاتها.",
+          "أضف نشاط متابعة مع المسؤول والموعد."
+        ]
+      },
+      "mistake": {
+        "en": "Check filters, company and access rights before recreating a missing record.",
+        "ar": "تحقق من المرشحات والشركة والصلاحيات قبل إعادة إنشاء سجل مفقود."
+      },
+      "quiz": {
+        "question": {
+          "en": "A record disappears after applying a filter. What is the first check?",
+          "ar": "اختفى سجل بعد تطبيق مرشح. ما أول فحص؟"
+        },
+        "options": {
+          "en": [
+            "Delete the database",
+            "Create it again",
+            "Clear the filter"
+          ],
+          "ar": [
+            "حذف القاعدة",
+            "إنشاء السجل مجدداً",
+            "إزالة المرشح"
+          ]
+        },
+        "answer": 2
+      },
+      "video": "https://drive.google.com/file/d/1bAFyLY1HN5J3PU1oVJrBNh61EuBkKYQj/view?usp=drivesdk",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/essentials.html"
+    },
+    {
+      "id": "L03",
+      "revision": 2,
+      "title": {
+        "en": "Company setup and access roles",
+        "ar": "إعداد المنشأة والصلاحيات"
+      },
+      "body": {
+        "en": "Define the training company identity, working language, timezone and base currency before entering transactions. Distinguish company settings from a user's personal preferences. A document's company determines the legal and accounting context; changing the active company is not a way to move an existing posted transaction between entities. Configure only the apps required for the training process.\n\nPrepare a responsibility matrix. The sales operator prepares offers, the warehouse operator validates actual quantities, the buyer prepares supplier orders and the accountant checks financial entries. Give each role the minimum practical access. A user who can prepare a payment should not necessarily approve it. Test both permitted and prohibited actions, including exports and access to unrelated companies.\n\nCountry-specific accounting, taxes and electronic invoicing need separate configuration and professional verification. A bilingual interface does not make a database compliant with any country's legal rules. In the training database use clearly labelled example taxes, never claim statutory compliance. Keep a settings register showing the setting, reason, owner, approval and test evidence. Changes should have an explanation and a rollback plan.",
+        "ar": "حدد هوية شركة التدريب ولغة العمل والمنطقة الزمنية والعملة الأساسية قبل تسجيل المعاملات. فرّق بين إعدادات الشركة وتفضيلات المستخدم. تحدد شركة المستند سياقه القانوني والمحاسبي؛ ولا يعد تغيير الشركة النشطة وسيلة لنقل قيد معتمد بين كيانين. ثبت فقط التطبيقات اللازمة لمسار التدريب.\n\nأعد مصفوفة للمسؤوليات. يجهز موظف المبيعات العروض، ويعتمد موظف المستودع الكميات الفعلية، ويعد المشتري أوامر الموردين، ويراجع المحاسب الأثر المالي. امنح كل دور الحد اللازم من الصلاحيات. ليس كل من يجهز دفعة مخولاً باعتمادها. اختبر العمليات المسموح بها والممنوعة، بما فيها التصدير والوصول إلى شركات أخرى.\n\nتحتاج المحاسبة المحلية والضرائب والفوترة الإلكترونية إلى إعداد مستقل وتحقق مهني. لا تعني الواجهة ثنائية اللغة الالتزام بقواعد أي دولة. استخدم ضرائب تدريبية واضحة ولا تدّع الامتثال القانوني. احتفظ بسجل للإعدادات يتضمن السبب والمسؤول والموافقة ونتيجة الاختبار، مع خطة للتراجع عن التغيير."
+      },
+      "lab": {
+        "en": [
+          "Create a company setup checklist.",
+          "Define sales, warehouse and finance roles.",
+          "Test one allowed and one denied operation for each role."
+        ],
+        "ar": [
+          "أعد قائمة تحقق لإعداد المنشأة.",
+          "حدد أدوار المبيعات والمستودع والمالية.",
+          "اختبر عملية مسموحة وأخرى ممنوعة لكل دور."
+        ]
+      },
+      "mistake": {
+        "en": "Do not use administrator access as the normal operator account.",
+        "ar": "لا تستخدم حساب المدير كحساب تشغيل يومي."
+      },
+      "quiz": {
+        "question": {
+          "en": "What should determine an employee’s access?",
+          "ar": "ما الأساس لتحديد صلاحية الموظف؟"
+        },
+        "options": {
+          "en": [
+            "Job responsibilities",
+            "Their preferred screen colour",
+            "The number of customers"
+          ],
+          "ar": [
+            "مسؤوليات العمل",
+            "لون الشاشة المفضل",
+            "عدد العملاء"
+          ]
+        },
+        "answer": 0
+      },
+      "video": "https://drive.google.com/file/d/1dLO4WkIPUTIojwvdVPPOJ5D65nmu3Tjv/view?usp=drivesdk",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/general/users.html"
+    },
+    {
+      "id": "L04",
+      "revision": 2,
+      "title": {
+        "en": "Contacts and product master data",
+        "ar": "العملاء والموردون وبيانات المنتجات"
+      },
+      "body": {
+        "en": "Master data is reused in transactions. A wrong unit, customer address or product identity can therefore affect many later documents. Create a naming convention and stable internal references before importing records. Keep the same product identity across buying, stock and selling whenever it represents the same item. Use variants only when differences such as colour or size require distinct operational identities.\n\nFor the training case create customer Gulf School, supplier Desert Furniture and product CHAIR-01. Use an example purchase price of 100 and selling price of 150 in training currency units. Record the unit as one chair. Prices in this case are learning assumptions, not market quotations. Inspect the product's sales, purchase and inventory settings. A service and a physically tracked item must not be configured interchangeably.\n\nDeduplicate contacts using reliable identifiers rather than name alone. Two people can share a name and one company can have multiple delivery addresses. Before importing, test a few rows, verify field mapping and preserve external identifiers for later updates. Export the sample and inspect what was actually stored. Maintain a controlled master-data change process so that operators do not silently change tax, unit or accounting defaults.",
+        "ar": "تستخدم المعاملات البيانات الأساسية بصورة متكررة. لذلك قد يؤثر خطأ في الوحدة أو عنوان العميل أو تعريف المنتج في مستندات كثيرة. ضع نظام تسمية ومراجع داخلية ثابتة قبل الاستيراد. حافظ على هوية المنتج نفسها في الشراء والمخزون والبيع ما دام الصنف واحداً. استخدم المتغيرات عندما تتطلب الفروق، مثل اللون أو المقاس، هوية تشغيلية مستقلة.\n\nأنشئ في التدريب عميلاً باسم مدرسة الخليج ومورداً باسم أثاث الصحراء ومنتجاً بالمرجع CHAIR-01. افترض سعر شراء 100 وسعر بيع 150 بوحدات عملة تدريبية، ووحدة قياس كرسي واحد. هذه أرقام تعليمية وليست أسعار سوق. راجع إعدادات البيع والشراء والمخزون، ولا تعامل الخدمة والصنف المادي المتتبع بالطريقة نفسها.\n\nأزل تكرار جهات الاتصال باستخدام معرفات موثوقة، لا الاسم فقط. قد يتشابه اسمان وقد تكون للشركة عدة عناوين تسليم. اختبر بضعة صفوف قبل الاستيراد وتحقق من ربط الحقول واحتفظ بالمعرفات الخارجية للتحديث. صدر العينة وراجع البيانات المخزنة. اضبط تعديل البيانات الأساسية حتى لا تتغير الوحدات أو الإعدادات المالية دون مراجعة."
+      },
+      "lab": {
+        "en": [
+          "Create the customer, supplier and CHAIR-01 product.",
+          "Import three sample contacts using stable external IDs.",
+          "Identify one duplicate and explain whether it is truly the same entity."
+        ],
+        "ar": [
+          "أنشئ العميل والمورد والمنتج CHAIR-01.",
+          "استورد ثلاث جهات اتصال بمعرفات خارجية ثابتة.",
+          "افحص سجلاً مشتبهاً بالتكرار واشرح هل هو الكيان نفسه."
+        ]
+      },
+      "mistake": {
+        "en": "A price field is not evidence of actual cost or an approved commercial agreement.",
+        "ar": "لا يمثل حقل السعر دليلاً على التكلفة الفعلية أو اتفاق تجاري معتمد."
+      },
+      "quiz": {
+        "question": {
+          "en": "Which data should be consistent before importing products?",
+          "ar": "ما البيانات التي يجب ضبطها قبل استيراد المنتجات؟"
+        },
+        "options": {
+          "en": [
+            "Only the picture",
+            "Units and stable references",
+            "Only the display colour"
+          ],
+          "ar": [
+            "الصورة فقط",
+            "الوحدات والمراجع الثابتة",
+            "لون العرض فقط"
+          ]
+        },
+        "answer": 1
+      },
+      "video": "https://drive.google.com/file/d/1-MyRv6cMdCcwuPLdNG0fisYpnuoyfuxB/view?usp=drivesdk",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/essentials/export_import_data.html"
+    },
+    {
+      "id": "L05",
+      "revision": 2,
+      "title": {
+        "en": "CRM pipeline and follow-up",
+        "ar": "إدارة الفرص والمتابعة"
+      },
+      "body": {
+        "en": "CRM organises potential business before a confirmed sale. Define stages according to observable work: qualified requirement, proposed solution, commercial review and decision. A stage should have entry criteria and a clear next action. Moving cards to make a dashboard look healthy produces unreliable forecasts. Record a lost reason when a genuine opportunity ends unsuccessfully.\n\nCreate an opportunity for Gulf School requesting 20 chairs. Record the contact, expected decision date, requirement and owner. Do not confuse an estimated opportunity value with invoiced revenue. Schedule a follow-up activity that states what must be confirmed: quantity, delivery address, budget or approval. Keep customer communication factual and avoid promises that stock or delivery planning cannot support.\n\nReview aging opportunities weekly. An opportunity without an owner, next activity or credible closing date needs attention. Discuss conversion rate alongside the definition of a qualified opportunity; otherwise teams can improve the apparent percentage merely by excluding difficult leads. Link the resulting quotation to the commercial context where your configuration permits it, then follow the sales workflow rather than treating a won card as a delivered order.",
+        "ar": "تنظم إدارة علاقات العملاء الأعمال المحتملة قبل تأكيد البيع. عرف المراحل وفق عمل يمكن ملاحظته: تأهيل الاحتياج، اقتراح الحل، المراجعة التجارية والقرار. يجب أن تتضمن كل مرحلة شروط دخول وخطوة تالية واضحة. يؤدي نقل البطاقات لتجميل اللوحة إلى توقعات غير موثوقة. سجل سبب الخسارة عند انتهاء فرصة حقيقية دون نجاح.\n\nأنشئ فرصة لمدرسة الخليج لشراء 20 كرسياً، وسجل جهة الاتصال وموعد القرار والمتطلبات والمسؤول. لا تخلط القيمة المتوقعة للفرصة بالإيراد المفوتر. حدد نشاط متابعة يوضح المطلوب تأكيده: الكمية أو العنوان أو الميزانية أو الموافقة. اجعل التواصل واقعياً ولا تعد بمخزون أو موعد لا تدعمه خطة التنفيذ.\n\nراجع الفرص القديمة أسبوعياً. تحتاج الفرصة دون مسؤول أو نشاط تالٍ أو موعد إغلاق منطقي إلى مراجعة. ناقش معدل التحويل مع تعريف الفرصة المؤهلة، حتى لا تتحسن النسبة ظاهرياً باستبعاد الحالات الصعبة. اربط عرض السعر بالسياق التجاري حسب إعدادك، ثم تابع مسار البيع؛ فالفوز بالفرصة لا يعني إتمام التسليم."
+      },
+      "lab": {
+        "en": [
+          "Create the 20-chair opportunity.",
+          "Define qualification criteria and a next activity.",
+          "Record a lost test opportunity with a clear reason."
+        ],
+        "ar": [
+          "أنشئ فرصة شراء 20 كرسياً.",
+          "حدد شروط التأهيل ونشاط المتابعة.",
+          "سجل فرصة تدريبية خاسرة مع سبب واضح."
+        ]
+      },
+      "mistake": {
+        "en": "Expected revenue is a forecast, not proof of cash received.",
+        "ar": "الإيراد المتوقع تقدير وليس دليلاً على استلام النقد."
+      },
+      "quiz": {
+        "question": {
+          "en": "What makes a useful next activity?",
+          "ar": "ما الذي يجعل نشاط المتابعة مفيداً؟"
+        },
+        "options": {
+          "en": [
+            "A clear owner, action and due date",
+            "A vague reminder only",
+            "A higher expected value"
+          ],
+          "ar": [
+            "مسؤول وإجراء وموعد واضح",
+            "تذكير مبهم فقط",
+            "قيمة متوقعة أعلى"
+          ]
+        },
+        "answer": 0
+      },
+      "video": "https://drive.google.com/file/d/1ZKJ8Y5cDawGBL-OoXki8mPj58QS45oAl/view?usp=drivesdk",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/sales/crm.html"
+    },
+    {
+      "id": "L06",
+      "revision": 1,
+      "title": {
+        "en": "Sales: quotation to customer order",
+        "ar": "المبيعات من العرض إلى الأمر"
+      },
+      "body": {
+        "en": "Prepare a quotation for Gulf School: 20 units of CHAIR-01 at 150 each. Before tax, the training subtotal is 3,000. Verify the customer, invoice and delivery addresses, currency, quantity, unit, unit price, discount, terms and validity. Use explicitly agreed commercial terms. A quotation is an offer; a confirmed sales order records the accepted commitment in the configured workflow.\n\nBefore confirming, check stock availability and the promised date. Confirming a sale is not proof that goods were physically dispatched or that the customer paid. Open related delivery and invoice records and inspect their states separately. Depending on configuration and product policy, invoicing may be based on ordered or delivered quantities. Explain the selected policy before creating an invoice.\n\nPractice an exception: the customer increases the quantity after partial delivery. Identify which documents can still be edited and which require an additional order, return or credit workflow. Do not overwrite historical evidence to make totals match. Preserve the customer approval and explain the resulting commitment. For reports, distinguish quotation value, order value, delivered value, invoiced value and collected cash.",
+        "ar": "جهز عرضاً لمدرسة الخليج يتضمن 20 وحدة من CHAIR-01 بسعر 150 للوحدة. الإجمالي التدريبي قبل الضريبة هو 3000. تحقق من العميل وعنوان الفاتورة والتسليم والعملة والكمية والوحدة والسعر والخصم والشروط والصلاحية. استخدم شروطاً تجارية متفقاً عليها. عرض السعر اقتراح، أما أمر البيع المؤكد فيسجل الالتزام المقبول حسب سير العمل.\n\nافحص التوفر والموعد الموعود قبل التأكيد. لا يثبت تأكيد البيع شحن البضاعة أو تحصيل قيمتها. افتح سجلات التسليم والفواتير المرتبطة وتحقق من حالة كل منها. قد تعتمد الفوترة على الكمية المطلوبة أو المسلمة بحسب الإعداد وسياسة المنتج؛ وضح السياسة قبل إنشاء الفاتورة.\n\nجرب استثناء زيادة الكمية بعد تسليم جزء منها. حدد المستندات القابلة للتعديل وما يحتاج إلى أمر إضافي أو إرجاع أو إشعار دائن. لا تستبدل الأدلة التاريخية لتسوية الأرقام. احتفظ بموافقة العميل ووضح الالتزام الناتج. ميّز في التقارير بين قيمة العروض والأوامر والتسليم والفواتير والنقد المحصل."
+      },
+      "lab": {
+        "en": [
+          "Create the 3,000 pre-tax quotation.",
+          "Confirm only after checking addresses and availability.",
+          "Inspect the linked delivery and explain the invoicing policy."
+        ],
+        "ar": [
+          "أنشئ عرضاً بإجمالي 3000 قبل الضريبة.",
+          "أكد بعد مراجعة العناوين والتوفر.",
+          "افحص التسليم المرتبط واشرح سياسة الفوترة."
+        ]
+      },
+      "mistake": {
+        "en": "Do not confuse sales order confirmation with completed delivery.",
+        "ar": "لا تخلط تأكيد أمر البيع بإتمام التسليم."
+      },
+      "quiz": {
+        "question": {
+          "en": "What is the pre-tax total for 20 chairs at 150?",
+          "ar": "ما إجمالي 20 كرسياً بسعر 150 قبل الضريبة؟"
+        },
+        "options": {
+          "en": [
+            "1,500",
+            "3,000",
+            "2,000"
+          ],
+          "ar": [
+            "1500",
+            "3000",
+            "2000"
+          ]
+        },
+        "answer": 1
+      },
+      "video": "",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/sales/sales.html"
+    },
+    {
+      "id": "L07",
+      "revision": 1,
+      "title": {
+        "en": "Purchasing and supplier control",
+        "ar": "المشتريات وضبط الموردين"
+      },
+      "body": {
+        "en": "Procurement begins with an authorised need. Prepare a request for quotation for 30 chairs, compare supplier responses and document the selection. Evaluate total cost, quality, delivery lead time, payment terms and reliability. The lowest unit price may create higher overall cost if transport, defects or delays are ignored. Keep quote comparisons in consistent currency and units.\n\nFor the case, order 30 chairs at 100 each. The pre-tax order amount is 3,000. Verify the supplier, product reference, unit, expected date and delivery destination. A purchase order authorises a commercial commitment; it does not prove goods arrived. When the shipment arrives, compare the actual quantity with the order and record damage or shortages before validating receipt.\n\nA supplier bill should be reviewed against the order and receipt according to company policy. If 28 good chairs arrive and two are damaged, do not record 30 acceptable chairs merely because the supplier invoice says 30. Resolve the discrepancy using the appropriate return, replacement or credit process. Keep the purchasing decision separate from payment approval where staffing permits. For urgent exceptions, record who approved the exception and why.",
+        "ar": "تبدأ المشتريات باحتياج معتمد. أعد طلب عرض لشراء 30 كرسياً وقارن ردود الموردين ووثق الاختيار. قيّم التكلفة الكلية والجودة ومدة التوريد وشروط السداد والموثوقية. قد يؤدي أقل سعر للوحدة إلى تكلفة أعلى عند إهمال النقل والعيوب والتأخير. قارن العروض بوحدات وعملات متسقة.\n\nاطلب في المثال 30 كرسياً بسعر 100، فيكون الإجمالي قبل الضريبة 3000. راجع المورد والمرجع والوحدة والموعد ومكان التسليم. يمثل أمر الشراء التزاماً تجارياً، ولا يثبت وصول البضاعة. عند وصولها قارن الكمية الفعلية بالأمر وسجل التلف أو النقص قبل اعتماد الاستلام.\n\nراجع فاتورة المورد مقابل الأمر والاستلام وفق سياسة الشركة. إذا وصل 28 كرسياً سليماً وكرسيان تالفان، فلا تسجل 30 كرسياً مقبولاً لمجرد أن الفاتورة تقول ذلك. عالج الفرق بالإرجاع أو الاستبدال أو الإشعار الدائن المناسب. افصل قرار الشراء عن اعتماد السداد قدر الإمكان، ووثق مسؤول وسبب الموافقة على أي استثناء عاجل."
+      },
+      "lab": {
+        "en": [
+          "Prepare an RFQ and compare two fictional suppliers.",
+          "Create the 30-chair purchase order.",
+          "Document a receipt shortage and the action to resolve it."
+        ],
+        "ar": [
+          "أعد طلب عرض وقارن موردين افتراضيين.",
+          "أنشئ أمر شراء 30 كرسياً.",
+          "وثق نقص الاستلام وخطوة معالجته."
+        ]
+      },
+      "mistake": {
+        "en": "Never validate expected quantities without checking physical receipt.",
+        "ar": "لا تعتمد الكمية المتوقعة دون فحص الاستلام الفعلي."
+      },
+      "quiz": {
+        "question": {
+          "en": "Which document alone proves receipt of goods?",
+          "ar": "أي مستند وحده يثبت استلام البضاعة؟"
+        },
+        "options": {
+          "en": [
+            "A supplier offer",
+            "A purchase order",
+            "A validated receipt based on actual count"
+          ],
+          "ar": [
+            "عرض المورد",
+            "أمر الشراء",
+            "استلام معتمد بناء على العد الفعلي"
+          ]
+        },
+        "answer": 2
+      },
+      "video": "",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/inventory_and_mrp/purchase.html"
+    },
+    {
+      "id": "L08",
+      "revision": 1,
+      "title": {
+        "en": "Inventory, delivery and returns",
+        "ar": "المخزون والتسليم والإرجاع"
+      },
+      "body": {
+        "en": "Inventory records quantities by operational location. Define the warehouse and meaningful locations before processing movements. On-hand quantity describes recorded stock; forecasted availability also considers planned movements. Neither replaces a physical check when accuracy is doubtful. Reservations allocate available stock to demand; a reservation is not itself a completed delivery.\n\nReceive 30 chairs, then deliver 20 to Gulf School. If no other movement occurs, the training ending quantity is 10. Validate only the quantity physically handled. When a partial delivery occurs, review the remaining requirement and decide whether a backorder is needed. Record the reference linking the delivery to the order. Use lot or serial tracking only where traceability requirements justify it and maintain it consistently.\n\nFor a return, identify the original delivery and the actual returned quantity. Inspect condition and destination before validating movement. Financial credit is a separate decision and document, not an automatic assumption in every workflow. Use inventory adjustments for investigated differences between counted and recorded stock, with an explanation and approval. Do not use adjustments to conceal an unrecorded sale, purchase or return. Reconcile movement history before altering balances.",
+        "ar": "يسجل المخزون الكميات حسب المواقع التشغيلية. عرف المستودع والمواقع المهمة قبل معالجة الحركات. تعبر الكمية المتاحة عن الرصيد المسجل، بينما يأخذ التوفر المتوقع الحركات المخططة في الحسبان. ولا يغني أي منهما عن الفحص الفعلي عند الشك. يخصص الحجز المخزون للطلب، لكنه لا يمثل تسليماً مكتملًا.\n\nاستلم 30 كرسياً ثم سلم 20 إلى مدرسة الخليج. إذا لم تحدث حركة أخرى يصبح الرصيد التدريبي 10. اعتمد فقط الكمية التي تمت مناولتها فعلياً. عند التسليم الجزئي راجع الطلب المتبقي وحدد الحاجة إلى طلب مؤجل. احتفظ بالمرجع الرابط بين التسليم وأمر البيع. استخدم تتبع الدفعات أو الأرقام التسلسلية عندما تتطلبه الحاجة وحافظ على اتساقه.\n\nعند الإرجاع حدد التسليم الأصلي والكمية المعادة فعلياً، وافحص الحالة وموقع الإيداع. الإشعار الدائن قرار ومستند مالي مستقل، وليس افتراضاً تلقائياً في كل مسار. استخدم تسوية المخزون لفروق العد التي جرى التحقيق فيها وتوثيق سببها واعتمادها. لا تستخدم التسوية لإخفاء بيع أو شراء أو إرجاع غير مسجل؛ راجع سجل الحركات أولاً."
+      },
+      "lab": {
+        "en": [
+          "Receive 30 and deliver 20; verify the remaining 10.",
+          "Test partial delivery and inspect the backorder.",
+          "Return two chairs using the original delivery reference."
+        ],
+        "ar": [
+          "استلم 30 وسلم 20 وتحقق من بقاء 10.",
+          "اختبر تسليماً جزئياً وافحص الطلب المؤجل.",
+          "أعد كرسيين مع ربطهما بالتسليم الأصلي."
+        ]
+      },
+      "mistake": {
+        "en": "Investigate stock differences before making an inventory adjustment.",
+        "ar": "حقق في فروق المخزون قبل إجراء التسوية."
+      },
+      "quiz": {
+        "question": {
+          "en": "After receiving 30 and delivering 20, what remains?",
+          "ar": "بعد استلام 30 وتسليم 20، كم يتبقى؟"
+        },
+        "options": {
+          "en": [
+            "10",
+            "20",
+            "50"
+          ],
+          "ar": [
+            "10",
+            "20",
+            "50"
+          ]
+        },
+        "answer": 0
+      },
+      "video": "",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/inventory_and_mrp/inventory.html"
+    },
+    {
+      "id": "L09",
+      "revision": 1,
+      "title": {
+        "en": "Invoices, bills and reconciliation",
+        "ar": "الفواتير والمطابقة المالية"
+      },
+      "body": {
+        "en": "An invoice requests or records an amount due; a payment records settlement activity. A draft invoice should be reviewed before posting. Verify partner, document date, due date, currency, line descriptions, quantity, price and configured taxes. Financial documents need appropriate accounts and localisation settings. Use a qualified accountant to approve real company configuration; the exercises here are operational training, not jurisdiction-specific tax advice.\n\nFor the chair sale, create the customer invoice using the policy configured in the prior lesson. Review the linked source order and delivered quantity where relevant. Inspect the amount due after posting. Record a training payment, then inspect the accounting state and reconciliation. A payment entry or bank statement line may still require matching; do not infer successful reconciliation only from an operator saying a transfer was made.\n\nPractice a partial settlement and identify the remaining balance. For an incorrect posted invoice, use the authorised correction or credit-note workflow instead of editing history without evidence. Review supplier bills with the same discipline. Keep bank references, approvals and supporting documents together. At period end reconcile customer balances, supplier balances and bank statements, investigating unexplained differences rather than forcing them to zero.",
+        "ar": "تسجل الفاتورة مبلغاً مستحقاً، وتسجل الدفعة عملية السداد. راجع الفاتورة المسودة قبل ترحيلها. تحقق من الطرف وتاريخ المستند والاستحقاق والعملة والوصف والكمية والسعر والضرائب المعدة. تحتاج المستندات المالية إلى حسابات وإعداد محلي مناسب. يجب أن يعتمد محاسب مؤهل الإعداد الفعلي؛ فهذه تمارين تشغيلية وليست مشورة ضريبية لدولة محددة.\n\nأنشئ فاتورة بيع الكراسي وفق السياسة المختارة في الدرس السابق. راجع أمر المصدر والكمية المسلمة عند الحاجة. افحص المبلغ المستحق بعد الترحيل، ثم سجل دفعة تدريبية وراجع الحالة المحاسبية والمطابقة. قد تحتاج الدفعة أو سطر كشف البنك إلى مطابقة؛ ولا يكفي قول الموظف إن التحويل تم لإثبات إتمام التسوية.\n\nجرب سداداً جزئياً وحدد الرصيد المتبقي. عالج خطأ الفاتورة المرحلة بمسار التصحيح أو الإشعار الدائن المعتمد بدلاً من تعديل التاريخ دون دليل. طبق الانضباط نفسه على فواتير الموردين. اجمع المراجع البنكية والموافقات والمستندات. وفي نهاية الفترة طابق أرصدة العملاء والموردين وكشوف البنك وحقق في الفروق دون تصفيرها قسراً."
+      },
+      "lab": {
+        "en": [
+          "Create and review a draft customer invoice.",
+          "Post only in training and record a partial payment.",
+          "Explain the difference between a payment and reconciliation."
+        ],
+        "ar": [
+          "أنشئ فاتورة عميل مسودة وراجعها.",
+          "رحّل في التدريب فقط وسجل سداداً جزئياً.",
+          "اشرح الفرق بين الدفعة والمطابقة."
+        ]
+      },
+      "mistake": {
+        "en": "Posting and reconciliation are different steps; verify each state.",
+        "ar": "الترحيل والمطابقة خطوتان مختلفتان؛ تحقق من حالة كل منهما."
+      },
+      "quiz": {
+        "question": {
+          "en": "An invoice of 3,000 receives 1,000. What balance remains, ignoring other adjustments?",
+          "ar": "فاتورة 3000 سدد منها 1000. ما المتبقي دون تسويات أخرى؟"
+        },
+        "options": {
+          "en": [
+            "Zero",
+            "1,000",
+            "2,000"
+          ],
+          "ar": [
+            "صفر",
+            "1000",
+            "2000"
+          ]
+        },
+        "answer": 2
+      },
+      "video": "",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/finance/accounting.html"
+    },
+    {
+      "id": "L10",
+      "revision": 1,
+      "title": {
+        "en": "Manufacturing fundamentals",
+        "ar": "أساسيات التصنيع"
+      },
+      "body": {
+        "en": "Manufacturing converts components into finished products using a defined bill of materials. Before creating production orders, establish product identities, units, component quantities and the expected output. A bill of materials is a controlled specification, not merely a shopping list. Version or approve important changes so the production team knows which specification applies.\n\nFor a separate training case, assemble a desk kit from one tabletop and four legs. A plan for ten kits requires ten tabletops and forty legs before allowances or alternatives. Check component availability, then create a manufacturing order in a database with the relevant app. Record actual consumption and actual output. Planned quantities are assumptions until execution evidence confirms them.\n\nDiscuss scrap, rework and partial completion. If a component is damaged, record the loss and its reason through the appropriate process. Do not report full output just to close an order. Compare expected and actual consumption to identify waste or an incorrect specification. Where work centres and operations are used, define capacity and routing deliberately; those features and costing behaviour depend on configuration and edition. Keep this assembly exercise separate from the trading inventory until both flows are understood.",
+        "ar": "يحول التصنيع المكونات إلى منتج نهائي وفق قائمة مواد محددة. قبل إنشاء أوامر الإنتاج اضبط هوية المنتجات والوحدات وكميات المكونات والمخرج المتوقع. قائمة المواد مواصفة خاضعة للضبط وليست مجرد قائمة شراء. اعتمد التغييرات المهمة أو وثق إصداراتها حتى يعرف فريق الإنتاج المواصفة المعمول بها.\n\nفي مثال مستقل جهز طقم مكتب من سطح واحد وأربع أرجل. تحتاج عشرة أطقم إلى عشرة أسطح وأربعين رجلاً قبل السماحات أو البدائل. تحقق من توفر المكونات ثم أنشئ أمر تصنيع في قاعدة مثبت بها التطبيق المناسب. سجل الاستهلاك الفعلي والإنتاج الفعلي؛ فالكميات المخططة افتراضات حتى تؤكدها أدلة التنفيذ.\n\nناقش الهالك وإعادة العمل والإتمام الجزئي. إذا تلف مكون فسجل الفقد وسببه بالمسار المناسب. لا تسجل إنتاجاً كاملاً لمجرد إغلاق الأمر. قارن الاستهلاك المتوقع والفعلي لاكتشاف الهدر أو خطأ المواصفة. عند استخدام مراكز العمل والعمليات اضبط الطاقة والمسارات بعناية؛ فالخصائص والتكلفة تعتمد على الإعداد والنسخة. افصل هذا المثال عن مخزون التجارة حتى تفهم المسارين."
+      },
+      "lab": {
+        "en": [
+          "Define a bill of materials for one desk kit.",
+          "Calculate components for ten kits.",
+          "Record one component loss and explain the resulting variance."
+        ],
+        "ar": [
+          "عرف قائمة مواد لطقم مكتب واحد.",
+          "احسب مكونات عشرة أطقم.",
+          "سجل فقد مكون واشرح الانحراف الناتج."
+        ]
+      },
+      "mistake": {
+        "en": "Do not replace actual consumption with planned quantities without checking.",
+        "ar": "لا تستبدل الاستهلاك الفعلي بالمخطط دون تحقق."
+      },
+      "quiz": {
+        "question": {
+          "en": "How many legs are needed for ten kits with four legs each?",
+          "ar": "كم رجلاً تحتاج عشرة أطقم بأربع أرجل لكل طقم؟"
+        },
+        "options": {
+          "en": [
+            "14",
+            "40",
+            "10"
+          ],
+          "ar": [
+            "14",
+            "40",
+            "10"
+          ]
+        },
+        "answer": 1
+      },
+      "video": "",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/inventory_and_mrp/manufacturing.html"
+    },
+    {
+      "id": "L11",
+      "revision": 1,
+      "title": {
+        "en": "Projects, employees and operating reports",
+        "ar": "المشروعات والموظفون وتقارير التشغيل"
+      },
+      "body": {
+        "en": "Use a project to organise work that has an owner, scope and completion criteria. For an ERP training rollout, create tasks for master data, permissions, workflow testing and user practice. A task marked complete should contain evidence that its acceptance condition was met. Hours recorded against tasks are operational evidence, not automatically customer invoices or approved payroll.\n\nMaintain employee information only where needed and restrict sensitive fields. Employee records, user accounts and external contacts serve different purposes; creating an employee does not necessarily create a login. Leave, attendance, expenses and payroll require their own rules and approvals. Verify which apps exist in the selected edition and do not promise payroll or local compliance from a generic setup.\n\nFor operating reports, begin with a question and a definition. Examples include open orders due this week, overdue customer balances and products with low available stock. Check date fields, company, currency and document states before comparing totals. Export a small sample and trace each row to its source. A visually impressive dashboard is weak evidence if draft and posted values are mixed. Explain each metric's population, time window, exclusions and owner.",
+        "ar": "استخدم المشروع لتنظيم العمل ذي المسؤول والنطاق ومعيار الإتمام. أنشئ في مشروع التدريب مهام للبيانات الأساسية والصلاحيات واختبار المسارات وتدريب المستخدمين. يجب أن تتضمن المهمة المكتملة دليلاً على تحقق شرط قبولها. الساعات المسجلة على المهام دليل تشغيلي، ولا تصبح تلقائياً فواتير عملاء أو رواتب معتمدة.\n\nاحتفظ ببيانات الموظف اللازمة فقط وقيد الحقول الحساسة. يختلف سجل الموظف عن حساب المستخدم وعن جهة الاتصال؛ ولا يعني إنشاء موظف إنشاء دخول للنظام. تحتاج الإجازات والحضور والمصروفات والرواتب إلى قواعد وموافقات مستقلة. تحقق من التطبيقات المتاحة في النسخة ولا تعد بتوافق الرواتب المحلية بمجرد إعداد عام.\n\nابدأ التقرير بسؤال وتعريف واضح. مثل الأوامر المفتوحة المستحقة هذا الأسبوع وأرصدة العملاء المتأخرة والأصناف منخفضة التوفر. راجع حقل التاريخ والشركة والعملة وحالة المستند قبل المقارنة. صدر عينة صغيرة وتتبع صفوفها إلى المصدر. لا تكفي لوحة جذابة إذا خلطت المسودات بالقيم المرحلة. عرف نطاق كل مؤشر وفترته واستثناءاته ومسؤوله."
+      },
+      "lab": {
+        "en": [
+          "Create four implementation tasks with acceptance evidence.",
+          "Define an overdue-orders report and its date field.",
+          "Trace three report rows to source documents."
+        ],
+        "ar": [
+          "أنشئ أربع مهام تنفيذ مع أدلة القبول.",
+          "عرف تقرير الأوامر المتأخرة وحقل التاريخ.",
+          "تتبع ثلاثة صفوف إلى مستنداتها."
+        ]
+      },
+      "mistake": {
+        "en": "Never compare totals with different date filters or document-state definitions.",
+        "ar": "لا تقارن إجماليات تختلف في التاريخ أو تعريف حالة المستند."
+      },
+      "quiz": {
+        "question": {
+          "en": "What should happen before trusting a dashboard total?",
+          "ar": "ماذا تفعل قبل اعتماد إجمالي في لوحة التقارير؟"
+        },
+        "options": {
+          "en": [
+            "Verify filters and trace a sample",
+            "Change the theme",
+            "Hide exceptions"
+          ],
+          "ar": [
+            "التحقق من المرشحات وتتبع عينة",
+            "تغيير المظهر",
+            "إخفاء الاستثناءات"
+          ]
+        },
+        "answer": 0
+      },
+      "video": "",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/services/project.html"
+    },
+    {
+      "id": "L12",
+      "revision": 1,
+      "title": {
+        "en": "Implementation capstone and handover",
+        "ar": "المشروع التطبيقي والتسليم"
+      },
+      "body": {
+        "en": "Complete one integrated scenario with evidence. Start with approved master data and role assignments. Purchase and receive 30 chairs at the assumed cost of 100. Sell and deliver 20 at 150. Create and review the supplier bill and customer invoice using your configured policies. Record a partial customer payment and reconcile the example bank movement where appropriate. The expected physical balance before returns is ten chairs; explain any difference from that balance.\n\nCreate an acceptance table with scenario, role, input, expected result, actual result and evidence reference. Include negative cases: an unauthorised user, duplicate import, insufficient stock, partial receipt, returned goods and a wrong invoice amount. A test passes when the expected business outcome is proven, not merely when no error message appears. Log defects with repeatable steps and retest after correction.\n\nPrepare a handover pack containing the process map, settings register, role matrix, cleaned master-data template, test results, user instructions and backup procedure. Rehearse restoration in a separate environment before go-live. Assign owners for data quality, support and change approval. This course portal records your training progress; it does not connect to an Odoo database or certify professional competence automatically. Assess practical performance using the evidence and a supervised demonstration.",
+        "ar": "نفذ سيناريو مترابطاً مع الأدلة، بدءاً بالبيانات الأساسية والأدوار المعتمدة. اشتر واستلم 30 كرسياً بتكلفة افتراضية 100، ثم بع وسلم 20 بسعر 150. أنشئ فاتورة المورد والعميل وراجعهما حسب السياسات المعدة. سجل سداداً جزئياً وطابق الحركة البنكية التدريبية عند الحاجة. الرصيد المادي المتوقع قبل الإرجاع عشرة كراسٍ؛ اشرح أي فرق.\n\nأعد جدول قبول يتضمن السيناريو والدور والمدخل والنتيجة المتوقعة والفعلية ومرجع الدليل. اختبر حالات سلبية مثل المستخدم غير المخول والاستيراد المكرر ونقص المخزون والاستلام الجزئي والإرجاع وخطأ مبلغ الفاتورة. ينجح الاختبار عند إثبات النتيجة التشغيلية، لا لمجرد غياب رسالة خطأ. سجل العيوب بخطوات قابلة للتكرار وأعد الاختبار بعد التصحيح.\n\nجهز حزمة تسليم تشمل خريطة العمليات وسجل الإعدادات ومصفوفة الصلاحيات وقالب البيانات ونتائج الاختبار ودليل المستخدم والنسخ الاحتياطي. جرب الاستعادة في بيئة مستقلة قبل التشغيل. حدد مسؤول جودة البيانات والدعم واعتماد التغيير. تسجل هذه البوابة تقدم التدريب، ولا تتصل بقاعدة أودو ولا تمنح كفاءة مهنية تلقائياً. قيّم الأداء من الأدلة والعرض العملي تحت الإشراف."
+      },
+      "lab": {
+        "en": [
+          "Execute the full buy–receive–sell–deliver–invoice–payment scenario.",
+          "Submit six positive and six negative test cases.",
+          "Restore a backup and present a supervised demonstration."
+        ],
+        "ar": [
+          "نفذ المسار من الشراء والاستلام إلى البيع والتسليم والفوترة والسداد.",
+          "قدم ست حالات اختبار إيجابية وست حالات سلبية.",
+          "استعد نسخة احتياطية وقدم عرضاً عملياً تحت الإشراف."
+        ]
+      },
+      "mistake": {
+        "en": "A checked completion box is self-reported progress, not a qualification.",
+        "ar": "علامة الإتمام تقدم يقره المتعلم وليست مؤهلاً مهنياً."
+      },
+      "quiz": {
+        "question": {
+          "en": "What is the strongest evidence that a workflow works?",
+          "ar": "ما أقوى دليل على صحة سير العمل؟"
+        },
+        "options": {
+          "en": [
+            "A screenshot of the home page",
+            "Repeatable tests with source-document evidence",
+            "A completion checkbox only"
+          ],
+          "ar": [
+            "صورة الصفحة الرئيسية",
+            "اختبارات قابلة للتكرار مع أدلة المستندات",
+            "علامة إتمام فقط"
+          ]
+        },
+        "answer": 1
+      },
+      "video": "",
+      "duration": "",
+      "source": "https://www.odoo.com/documentation/19.0/applications.html"
+    }
+  ]
+}

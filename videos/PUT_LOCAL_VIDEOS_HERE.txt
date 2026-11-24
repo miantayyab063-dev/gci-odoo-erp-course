@@ -1,0 +1,3 @@
+Copy your own permitted MP4 files here. Use simple filenames, e.g. lesson01.mp4.
+In the course video URL field enter /videos/lesson01.mp4
+These videos stay on your computer and play without internet while the local server runs.

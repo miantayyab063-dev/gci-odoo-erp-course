@@ -1,0 +1,28 @@
+VIDEO LINK UPDATE — 30 October 2026
+
+Five supplied Google Drive links have been inserted into lesson video fields 1–5.
+The original filenames refer to a contracting / Muqawalat course. Video contents
+have not been reviewed or verified as matching the Odoo lesson topics.
+The videos remain on Drive; they are not included as MP4 files in this ZIP.
+Internet and permission to access the relevant Drive files are required.
+Drive embedding can be restricted. Use Open original video if needed.
+
+Use a fresh extracted folder to load the updated initial course. If reusing an
+existing installation, existing data/course.json is intentionally preserved.
+In that case log in as admin and paste these links into the corresponding video fields.
+No original Drive files or sharing settings have been modified.
+
+محاضرة رقم 1 - كورس مقاولات .mp4
+https://drive.google.com/file/d/1yyfRK9J0kPbdsq3oVOcerrAjt9RO6Jyx/view?usp=drivesdk
+
+محاضرة رقم 2 - كورس مقاولات .mp4
+https://drive.google.com/file/d/1bAFyLY1HN5J3PU1oVJrBNh61EuBkKYQj/view?usp=drivesdk
+
+محاضرة رقم 3 - كورس مقاولات.mp4
+https://drive.google.com/file/d/1dLO4WkIPUTIojwvdVPPOJ5D65nmu3Tjv/view?usp=drivesdk
+
+محاضرة رقم 4  كورس مقاولات .mp4
+https://drive.google.com/file/d/1-MyRv6cMdCcwuPLdNG0fisYpnuoyfuxB/view?usp=drivesdk
+
+محاضرة رقم 5 - كورس مقاولات.mp4
+https://drive.google.com/file/d/1ZKJ8Y5cDawGBL-OoXki8mPj58QS45oAl/view?usp=drivesdk
